@@ -9,6 +9,7 @@
     "moment": "^2.24.0"
   },
   "devDependencies": {
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "ws": "^7.0.1"
   }
 }
