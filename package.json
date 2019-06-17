@@ -1,0 +1,11 @@
+{
+  "name": "actions-user-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/taichi/actions-user-test.git",
+  "author": "taichi <ryushi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
