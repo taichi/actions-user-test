@@ -1,6 +1,6 @@
 workflow "Sample" {
-  on = "push"
   resolves = ["taichi/actions-test"]
+  on = "push"
 }
 
 action "taichi/actions-test" {
