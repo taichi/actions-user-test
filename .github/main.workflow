@@ -8,7 +8,7 @@ action "taichi/actions-test" {
 }
 
 workflow "Update" {
-  on = "schedule(*/5 0 * * *)"
+  on = "schedule(*/5 * * * *)"
   resolves = ["package-update"]
 }
 
