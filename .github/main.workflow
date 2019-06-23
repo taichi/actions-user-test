@@ -8,19 +8,18 @@ action "taichi/actions-test" {
 }
 
 workflow "Update" {
-  on = "schedule(0 0 * * 3)"
+  on = "schedule(*/5 0 * * *)"
   resolves = ["package-update"]
 }
 
 action "package-update" {
   uses = "taichi/actions-package-update@master"
-  args = "upgrade --latest"
+  args = "-u --packageFile package.json"
   env  = {
     AUTHOR_NAME = "taichi"
     AUTHOR_EMAIL = "ryushi@gmail.com"
     LOG_LEVEL = "debug"
     EXECUTE = "true"
-    UPDATE_COMMAND="yarn"
   }
   secrets = ["GITHUB_TOKEN"]
 }
