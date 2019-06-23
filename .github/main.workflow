@@ -14,12 +14,13 @@ workflow "Update" {
 
 action "package-update" {
   uses = "taichi/actions-package-update@master"
-  args = "-u --loglevel verbose --packageFile package.json"
+  args = "upgrade --latest"
   env  = {
     AUTHOR_NAME = "taichi"
     AUTHOR_EMAIL = "ryushi@gmail.com"
     LOG_LEVEL = "debug"
     EXECUTE = "true"
+    UPDATE_COMMAND="yarn"
   }
   secrets = ["GITHUB_TOKEN"]
 }
